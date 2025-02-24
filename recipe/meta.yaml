@@ -1,18 +1,18 @@
 {% set name = "pylibacl" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz 
-  sha256: ed496e74ca5452d5d4cebe23df229ea462735a96528b9fa28e3ce1f7a2bed31a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 56c15e867fe4c724531bbf97407589cbbf8dbd285a8d84fe7ecc90fc322378d7
 
 build:
-  skip: True  # [not linux]
+  skip: true  # [not linux]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -42,9 +42,7 @@ about:
   home: https://pylibacl.k1024.org/
   summary: POSIX.1e ACLs for python
   description: >
-    This is a C extension module for Python which
-    implements POSIX ACLs manipulation. It is a wrapper on top
-    of the systems's acl C library - see acl(5).
+    This is a C extension module for Python which implements POSIX ACLs manipulation. It is a wrapper on top of the systems's acl C library - see acl(5).
   license: LGPL-2.1-or-later
   license_file: COPYING
   doc_url: https://pylibacl.k1024.org/
