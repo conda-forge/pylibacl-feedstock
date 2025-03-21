@@ -1,5 +1,5 @@
 {% set name = "pylibacl" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 450a7b3cc64a7f254430b466d8a745f259ae134432a9a4ca930ef88424b9be58
+  sha256: 56c15e867fe4c724531bbf97407589cbbf8dbd285a8d84fe7ecc90fc322378d7
 
 build:
   skip: true  # [not linux]
